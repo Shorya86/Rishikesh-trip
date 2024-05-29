@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s;
+        z-index: -1;
+    }
+
+    .box:hover::before {
+        opacity: 0.5; /* Adjust opacity value as needed */
+    }
+
+    .box-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s, transform 0.5s;
+    }
+
+    .box:hover .box-content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box" style="background-image: url('laxman\ jhula2.jpg');">
+        <div class="box-content">
+            <h3>Laxman Jhula And Ram Jhula</h3>
+            <p>The 450 feet long iron suspended bridges – Laxman and Ram Jhula – are the glory of this beautiful
+                tourist hub.</p>
+        </div>
+    </div>
+
+    <div class="box" style="background-image: url('river.jpeg');">
+        <div class="box-content">
+            <h3>River Rafting</h3>
+            <p>White water rafting in Rishikesh is largely concentrated around Kaudiyala and its banks. It is a
+                major Rishikesh tourist place in the holy town</p>
+        </div>
+    </div>
+
+    <div class="box" style="background-image: url('neelkanth.jpg');">
+        <div class="box-content">
+            <h3>Neelkanth Mahadev Temple</h3>
+            <p>Situated at 1670 m, amidst the sylvan forest, the Neelkanth Mahadev Temple is located 12 km from
+                the town of Rishikesh.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="box" style="background-image: url('triveni.jpeg');">
+        <div class="box-content">
+            <h3>Triveni Ghat</h3>
+            <p>Triveni Ghat is a crowded ghat alongside the river Ganges, with pilgrims bathing around and is
+                one of the points of interest in Rishikesh.</p>
+        </div>
+    </div>
+
+    <div class="box" style="background-image: url('waterfal.jpg');">
+        <div class="box-content">
+            <h3>Neer Garh Waterfall</h3>
+            <p>Just two kilometres from the Laxman Jhula, a visit to this mesmerizing waterfall that happens to
+                be one of the best Rishikesh sightseeing spots,</p>
+        </div>
+    </div>
+
+    <div class="box" style="background-image: url('gufa.jpg');">
+        <div class="box-content">
+            <h3>Vashishta Gufa</h3>
+            <p>An ancient cave, away from the city lights, it is an ideal place to visit in Rishikesh in 2 days.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
